@@ -8,12 +8,12 @@ import sys
 import traceback
 
 from sqlalchemy.sql.expression import text, update
-import GreyCilik.modules.sql.users_sql as sql
+import Wiki_W.modules.sql.users_sql as sql
 from sys import argv
 from typing import Optional
 from telegram import __version__ as peler
 from platform import python_version as memek
-from GreyCilik import (
+from Wiki_W import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -34,9 +34,9 @@ from GreyCilik import (
 
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from GreyCilik.modules import ALL_MODULES
-from GreyCilik.modules.helper_funcs.chat_status import is_user_admin
-from GreyCilik.modules.helper_funcs.misc import paginate_modules
+from Wiki_W.modules import ALL_MODULES
+from Wiki_W.modules.helper_funcs.chat_status import is_user_admin
+from Wiki_W.modules.helper_funcs.misc import paginate_modules
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -55,7 +55,7 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 
 def get_readable_time(seconds: int) -> str:
@@ -83,7 +83,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-SIESTA_IMG = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
+wiki_IMG = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
@@ -101,7 +101,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("GreyCilik.modules." + module_name)
+    imported_module = importlib.import_module("Wiki_W.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -209,10 +209,10 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/GreyCilik?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="siesta_"),
+                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
                             InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
                         ],
                         [
@@ -371,10 +371,10 @@ def help_button(update, context):
         pass
 
 
-def siesta_about_callback(update, context):
+def wiki_about_callback(update, context):
     query = update.callback_query
     chat = update.effective_chat
-    if query.data == "siesta_":
+    if query.data == "wiki_":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_text"),
             parse_mode=ParseMode.MARKDOWN,
@@ -382,23 +382,23 @@ def siesta_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Admins", callback_data="siesta_admin"),
-                        InlineKeyboardButton(text=gs(chat.id, "notes_button"), callback_data="siesta_notes"),
+                        InlineKeyboardButton(text="Admins", callback_data="wiki_admin"),
+                        InlineKeyboardButton(text=gs(chat.id, "notes_button"), callback_data="wiki_notes"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), callback_data="siesta_support"),
-                        InlineKeyboardButton(text="Credits", callback_data="siesta_credit"),
+                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), callback_data="wiki_support"),
+                        InlineKeyboardButton(text="Credits", callback_data="wiki_credit"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/grey423/GreyCilik"),
+                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/grey423/Wiki_W"),
                     ],
                     [
-                    InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_back"),
+                    InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_back"),
                     ]
                 ]
             ),
         )
-    elif query.data == "siesta_back":
+    elif query.data == "wiki_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -410,10 +410,10 @@ def siesta_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/GreyCilik?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="siesta_"),
+                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
                             InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
                         ],
                         [
@@ -427,7 +427,7 @@ def siesta_about_callback(update, context):
                 disable_web_page_preview=False,
         )
 
-    elif query.data == "siesta_admin":
+    elif query.data == "wiki_admin":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_admin_text"),
             parse_mode=ParseMode.MARKDOWN,
@@ -435,25 +435,25 @@ def siesta_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
                     ]
                 ]
             ),
         )
 
-    elif query.data == "siesta_notes":
+    elif query.data == "wiki_notes":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_notes_text"),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
                     ]
                 ]
             ),
         )
-    elif query.data == "siesta_support":
+    elif query.data == "wiki_support":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_support_text"),
             parse_mode=ParseMode.MARKDOWN,
@@ -464,14 +464,14 @@ def siesta_about_callback(update, context):
                         InlineKeyboardButton(text=gs(chat.id, "updates_channel_link_button"), url="https://t.me/CilikProject"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
                     ]
                 ]
             ),
         )
 
 
-    elif query.data == "siesta_credit":
+    elif query.data == "wiki_credit":
         query.message.edit_text(
             text=gs(chat.id, "pm_about_credit_text"),
             parse_mode=ParseMode.MARKDOWN,
@@ -481,7 +481,7 @@ def siesta_about_callback(update, context):
                         InlineKeyboardButton(text="Grey", url="https://github.com/grey423"),
                     ] ,
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
                     ]
                 ]
             ),
@@ -502,7 +502,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="siesta_"),
+                        InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
                     ]
                 ]
             ),
@@ -518,10 +518,10 @@ def Source_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(
                      [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/GreyCilik?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="siesta_"),
+                            InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
                             InlineKeyboardButton(text=gs(chat.id, "inline_button"), switch_inline_query_current_chat=""),
                         ],
                         [
@@ -840,7 +840,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        siesta_about_callback, pattern=r"siesta_", run_async=True
+        wiki_about_callback, pattern=r"wiki_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
