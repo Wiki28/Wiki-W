@@ -1,5 +1,5 @@
 from envparse import env
-from GreyCilik import LOGGER
+from Wiki_W import LOGGER
 
 DEFAULTS = {
     "LOAD_MODULES": True,
