@@ -64,12 +64,12 @@ RUN apt update && apt upgrade -y && \
 # Pypi package Repo upgrade
 RUN pip3 install --upgrade pip setuptools
 
-# Copy Python Requirements to /root/GreyCilik 
-RUN git clone -b shiken https://github.com/grey423/GreyCilik /root/GreyCilik
-WORKDIR /root/GreyCilik
+# Copy Python Requirements to /root/Wiki_W 
+RUN git clone -b shiken https://github.com/Wiki28/Wiki_W /root/Wiki_W
+WORKDIR /root/Wiki_W
 
-#Copy config file to /root/GreyCilik/GreyCilik
-COPY ./GreyCilik/sample_config.py ./GreyCilik/config.py* /root/GreyCilik/GreyCilik/
+#Copy config file to /root/Wiki_W/Wiki_W
+COPY ./Wiki_W/sample_config.py ./Wiki_W/config.py* /root/Wiki_W/Wiki_W/
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -77,4 +77,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3", "-m", "GreyCilik"]
+CMD ["python3", "-m", "Wiki_W"]
