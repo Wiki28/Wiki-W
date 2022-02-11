@@ -83,10 +83,10 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-wiki_IMG = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
+Wiki_IMG = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @greyyvbss \
+ You can support the project by contacting @Wiki_W \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
