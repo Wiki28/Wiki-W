@@ -23,7 +23,7 @@ from ptbcontrib.postgres_persistence import PostgresPersistence
 StartTime = time.time()
 
 def get_user_list(__init__, key):
-    with open("{}/GreyCilik/{}".format(os.getcwd(), __init__), "r") as json_file:
+    with open("{}/Wiki_W/{}".format(os.getcwd(), __init__), "r") as json_file:
         return json.load(json_file)[key]
 
 # enable logging
@@ -37,10 +37,10 @@ logging.basicConfig(
 logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
-LOGGER = logging.getLogger('[GreyCilik]')
-LOGGER.info("Grey is starting. | An Grey Cilik Parts. | Licensed under GPLv3.")
+LOGGER = logging.getLogger('[Wiki_W]')
+LOGGER.info("Grey is starting. | An Wiki W Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/grey423 (t.me/greyyvbss)")
+LOGGER.info("Project maintained by: github.com/Wiki28 (t.me/Wiki_W)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
@@ -134,7 +134,7 @@ if ENV:
         raise Exception("Your blacklisted chats list does not contain valid integers.")
 
 else:
-    from GreyCilik.config import Development as Config
+    from Wiki_W.config import Development as Config
 
     TOKEN = Config.TOKEN
 
@@ -229,7 +229,7 @@ else:
         sw = None
         LOGGER.warning("Can't connect to SpamWatch!")
 
-from GreyCilik.modules.sql import SESSION
+from Wiki_W.modules.sql import SESSION
 
 defaults = tg.Defaults(run_async=True)
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
@@ -299,7 +299,7 @@ DEMONS = list(DEMONS)
 TIGERS = list(TIGERS)
 
 # Load at end to ensure all prev variables have been set
-from GreyCilik.modules.helper_funcs.handlers import (
+from Wiki_W.modules.helper_funcs.handlers import (
     CustomCommandHandler,
     CustomMessageHandler,
     CustomRegexHandler,
