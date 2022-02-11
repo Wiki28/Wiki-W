@@ -9,17 +9,17 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 
 # PM Text
 pm_start_text: |
-  *ʜᴇʟʟᴏ ɪ'ᴍ ɢʀᴇʏ ᴄɪʟɪᴋ*
-  ɢʀᴇʏ ᴄɪʟɪᴋ ɪꜱ ᴀ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
-  ʜɪᴛ /help . ᴍᴀɪɴᴛᴀɴᴇᴅ ʙʏ [Grey](t.me/greyyvbss).
+  *Hello I'm Wiki W*
+  I'm Bot Manager + Music For Your Group.
+  Hit /help . Made by [Wiki W](t.me/Wiki_W).
    
 group_start_text: |
-  *👋🏻 Hi, I'm Grey Cilik!*
+  *👋🏻 Hi, I'm Wiki W!*
   
   *Started active since :* `{}`
 
 pm_about_text: |
-  ✺ Hey I'm *Grey Cilik*, a powerful group management bot built to help you manage your group easily. ✺
+  ✺ Hey I'm *Wiki W*, a powerful group management bot built to help you manage your group easily. ✺
 
   ✪ I can restrict users.
   ✪ I can greet users with customizable welcome messages and even set a group's rules.
@@ -28,8 +28,8 @@ pm_about_text: |
   ✪ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
   ✪ I check for admins' permissions before executing any command and more stuffs
 
-  _GreyCilik's licensed under the GNU General Public License v3.0_
-  Click on button bellow to get basic help for Grey Cilik.
+  _Wiki's licensed under the GNU General Public License v3.0_
+  Click on button bellow to get basic help for Wiki W.
 pm_about_admin_text: |
   *✺ Let's make your group bit effective now ✺*
 
@@ -48,13 +48,13 @@ pm_about_notes_text: |
   ✪ You can save message/media/audio or anything as notes to get a note simply use # at the beginning of a word
   ✪ You can also set buttons for notes and filters (refer help menu)
 pm_about_support_text: |
-  *✺ Grey Cilik support chats ✺*
+  *✺ Wiki W support chats ✺*
 
-  Join My Support Group/Channel for see or report a problem on Cilik.
+  Join My Support Group/Channel for see or report a problem on Wiki W.
 pm_about_credit_text: |
-  *✺ Credits for GreyCilik ✺
+  *✺ Credits for Wiki W ✺
  
- Here Developers Making And Give Inspiration For Made The Grey Cilik
+ Here Developers Making And Give Inspiration For Made The Wiki W
 pm_help_text: |
   *✺ Click on the button bellow to get description about specifics command. ✺*
 pm_help_module_text: "Here is the help for the *{}* module :\n\n"
@@ -83,7 +83,7 @@ notes_button: "Notes"
 source_button: "Source Code"
 help_button: "Get Help"
 back_button: "Go back"
-about_button: "About Grey Cilik"
+about_button: "About Wiki W"
 inline_button: "Try inline!​​"
 
 # MODULES
