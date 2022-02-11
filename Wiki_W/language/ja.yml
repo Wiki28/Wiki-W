@@ -1,20 +1,20 @@
 # Language name in their native
-language: "Indonesia 🇮🇩"
+language: "日本 🇯🇵"
 # name of people(s) who worked on this translation
 authors: "@saint_foire"
 
 # languages
-curr_chat_lang: "Hai. Bahasa Anda saat ini adalah {}, pilih yang Anda inginkan dari tombol di bawah :)"
-set_chat_lang: "Bagus, menggunakan Bahasa {} mulai sekarang!"
+curr_chat_lang: "こんにちは. あなたの現在の言語は {}, 下のボタンからお好きなものをお選びください :)"
+set_chat_lang: "良い, 言語を使用する {} ️今後!"
 
 # PM Text
 pm_start_text: |
- *Halo saya Wiki W*
-Wiki W Adalah Bot Manager + Musik Untuk Group Anda.
-Tekan /help . Di Buat Oleh [Wiki W](t.me/Wiki_W).
+ *こんにちは私は ウィキW*
+ウィキW ボットマネージャーです + あなたのグループのための音楽.
+押す /help . 作られた [Wiki W](t.me/Wiki_W).
    
 group_start_text: |
-  *👋🏻 Hai, saya Wiki W!* 
+  *👋🏻 Halo, saya Wiki W!* 
   
   *Mulai aktif sejak :* `{}`
 
