@@ -12,7 +12,7 @@ from Wiki_W import telethn
 
 client = MongoClient()
 client = MongoClient(MONGO_DB_URI)
-db = client["emiexrobot"]
+db = client["WikiTapiBot"]
 gbanned = db.gban
 
 
