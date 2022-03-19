@@ -5,9 +5,9 @@ import textwrap
 import bs4
 import jikanpy
 import requests
-from GreyCilik import DEV_USERS, OWNER_ID, DRAGONS, dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.language import gs
+from Wiki_W import DEV_USERS, OWNER_ID, DRAGONS, dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.language import gs
 from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
                       Update)
 from telegram.ext import CallbackContext, CallbackQueryHandler
