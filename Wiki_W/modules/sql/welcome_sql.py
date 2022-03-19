@@ -2,18 +2,20 @@ import random
 import threading
 from typing import Union
 
-from GreyCilik.modules.helper_funcs.msg_types import Types
-from GreyCilik.modules.sql import BASE, SESSION
+from Wiki_W.modules.helper_funcs.msg_types import Types
+from Wiki_W.modules.sql import BASE, SESSION
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
 
 DEFAULT_WELCOME_MESSAGES = [
     "Hay {first} Apa Kabar ???",
-    "Hay {first} Selamat Datang di {chatname}!.",   
+    "Hay {first} Selamat Datang di {chatname}!.",
+    "Ikan Hiu Lumba Lumba Welcome Ya {first}.",   
 ]
 DEFAULT_GOODBYE_MESSAGES = [
     "Selamat Tinggal {first}.",
     "Babayy {first} 👋🏻",
+    "Ikan Hiu Makan Tongkol, Balik Lagi Kau {first}, Kepala Bapak Engkau Kek Kontol.",
 ]
 # Line 111 to 152 are references from https://bindingofisaac.fandom.com/wiki/Fortune_Telling_Machine
 
