@@ -10,12 +10,12 @@ from pyrogram.types import (
     Message,
 )
 
-from GreyCilik import pbot as Client
-from GreyCilik import (
+from Wiki_W import pbot as Client
+from Wiki_W import (
     OWNER_ID as owner,
     SUPPORT_CHAT as log,
 )
-from GreyCilik.utils.errors import capture_err
+from Wiki_W.utils.errors import capture_err
 
 
 def content(msg: Message) -> [None, str]:
@@ -49,7 +49,7 @@ async def bug(_, msg: Message):
     thumb = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
     
     bug_report = f"""
-**#BUG : ** **[Master](https://t.me/greyyvbss)**
+**#BUG : ** **[Master](https://t.me/terserah_wiki)**
 **From User : ** **{mention}**
 **User ID : ** **{user_id}**
 **Group : ** **{chat_username}**
