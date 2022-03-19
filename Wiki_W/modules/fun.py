@@ -2,12 +2,12 @@ import html
 import random
 import time
 
-import GreyCilik.modules.fun_strings as fun_strings
-from GreyCilik import dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.chat_status import is_user_admin
-from GreyCilik.modules.helper_funcs.extraction import extract_user
-from GreyCilik.modules.language import gs
+import Wiki_W.modules.fun_strings as fun_strings
+from Wiki_W import dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.chat_status import is_user_admin
+from Wiki_W.modules.helper_funcs.extraction import extract_user
+from Wiki_W.modules.language import gs
 from telegram import ChatPermissions, ParseMode, Update
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext
