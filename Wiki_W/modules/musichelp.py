@@ -1,4 +1,4 @@
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 
 def helps(chat):
