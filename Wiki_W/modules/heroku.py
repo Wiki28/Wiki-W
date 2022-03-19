@@ -5,13 +5,13 @@ import os
 import heroku3
 import requests
 
-from GreyCilik import (
+from Wiki_W import (
   telethn as borg,
   HEROKU_APP_NAME,
   HEROKU_API_KEY,
   OWNER_ID,
 )
-from GreyCilik.events import register
+from Wiki_W.events import register
 
 heroku_api = "https://api.heroku.com"
 Heroku = heroku3.from_key(HEROKU_API_KEY)
@@ -193,7 +193,7 @@ async def _(dyno):
         dyno.chat_id,
         "logs.txt",
         reply_to=dyno.id,
-        caption="Grey logs.",
+        caption="Wiki logs.",
     )
 
     await asyncio.sleep(5)
