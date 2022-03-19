@@ -1,8 +1,8 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from GreyCilik import telethn
-from GreyCilik.events import register as tomori
+from Wiki_W import telethn
+from Wiki_W.events import register as tomori
 
 
 @tomori(pattern="^/tagall ?(.*)")
