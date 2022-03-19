@@ -390,7 +390,7 @@ def wiki_about_callback(update, context):
                         InlineKeyboardButton(text="Credits", callback_data="wiki_credit"),
                     ],
                     [
-                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://github.com/grey423/Wiki_W"),
+                        InlineKeyboardButton(text=gs(chat.id, "source_button"), url="https://Nekopoi.care"),
                     ],
                     [
                     InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_back"),
@@ -478,7 +478,7 @@ def wiki_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="Grey", url="https://github.com/grey423"),
+                        InlineKeyboardButton(text="Wiki W", url="https://github.com/Wiki28"),
                     ] ,
                     [
                         InlineKeyboardButton(text=gs(chat.id, "back_button"), callback_data="wiki_"),
@@ -814,7 +814,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                  f"""**Grey Cilik Started!**
+                  f"""**Wiki W Started!**
 **Python:** `{memek()}`
 **Telegram Library:** `v{peler}`""",
                 parse_mode=ParseMode.MARKDOWN
