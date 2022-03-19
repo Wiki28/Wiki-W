@@ -4,12 +4,12 @@ from telegram.ext.filters import Filters
 from telegram import Update, message, ParseMode
 from telegram.ext import CallbackContext
 
-from GreyCilik.modules.helper_funcs.decorators import Greycmd, Greymsg
-from GreyCilik.modules.helper_funcs.channel_mode import user_admin, AdminPerms
-from GreyCilik.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.helper_funcs.decorators import Wikicmd, Wikimsg
+from Wiki_W.modules.helper_funcs.channel_mode import user_admin, AdminPerms
+from Wiki_W.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
+from Wiki_W.modules.language import gs
 
-@Greycmd(command="antichannelmode", group=100)
+@Wikicmd(command="antichannelmode", group=100)
 @user_admin(AdminPerms.CAN_RESTRICT_MEMBERS)
 def set_antichannel(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -29,7 +29,7 @@ def set_antichannel(update: Update, context: CallbackContext):
     message.reply_html(
         text=gs(chat.id, "status_antichannel").format(antichannel_status(chat.id), html.escape(chat.title)))
 
-@Greymsg(Filters.chat_type.groups, group=110)
+@Wikimsg(Filters.chat_type.groups, group=110)
 def eliminate_channel(update: Update, context: CallbackContext):
     message = update.effective_message
     chat = update.effective_chat
