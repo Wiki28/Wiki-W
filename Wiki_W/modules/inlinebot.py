@@ -1,8 +1,8 @@
 import traceback
 
-from GreyCilik import pbot as app
-from GreyCilik.utils.pluginhelper import fetch
-from GreyCilik.utils.inlinefuncs import *
+from Wiki_W import pbot as app
+from Wiki_W.utils.pluginhelper import fetch
+from Wiki_W.utils.inlinefuncs import *
 
 __MODULE__ = "Inline"
 __HELP__ = """See inline for help related to inline"""
