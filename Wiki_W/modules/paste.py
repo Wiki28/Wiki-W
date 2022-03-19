@@ -7,10 +7,10 @@ from pykeyboard import InlineKeyboard
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton
 
-from GreyCilik import aiohttpsession as session
-from GreyCilik import pbot as app
-from GreyCilik.utils.errors import capture_err
-from GreyCilik.utils.pastebin import paste
+from Wiki_W import aiohttpsession as session
+from Wiki_W import pbot as app
+from Wiki_W.utils.errors import capture_err
+from Wiki_W.utils.pastebin import paste
 
 __mod_name__ = "Paste​"
 
