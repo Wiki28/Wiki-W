@@ -1,4 +1,4 @@
-from GreyCilik.modules.disable import (
+from Wiki_W.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
@@ -9,11 +9,11 @@ from telegram.ext import (
     InlineQueryHandler,
 )
 from telegram.ext.filters import BaseFilter
-from GreyCilik import dispatcher as d, LOGGER
+from Wiki_W import dispatcher as d, LOGGER
 from typing import Optional, Union, List
 
 
-class GreyHandler:
+class WikiHandler:
     def __init__(self, d):
         self._dispatcher = d
 
@@ -54,7 +54,7 @@ class GreyHandler:
                         group,
                     )
                 LOGGER.debug(
-                    f"[GreyCMD] Loaded handler {command} for function {func.__name__} in group {group}"
+                    f"[WikiCMD] Loaded handler {command} for function {func.__name__} in group {group}"
                 )
             except TypeError:
                 if can_disable:
@@ -81,7 +81,7 @@ class GreyHandler:
                         )
                     )
                 LOGGER.debug(
-                    f"[GreyCMD] Loaded handler {command} for function {func.__name__}"
+                    f"[WikiCMD] Loaded handler {command} for function {func.__name__}"
                 )
 
             return func
@@ -110,7 +110,7 @@ class GreyHandler:
                         MessageHandler(pattern, func, run_async=run_async), group
                     )
                 LOGGER.debug(
-                    f"[GreyMSG] Loaded filter pattern {pattern} for function {func.__name__} in group {group}"
+                    f"[WikiMSG] Loaded filter pattern {pattern} for function {func.__name__} in group {group}"
                 )
             except TypeError:
                 if can_disable:
@@ -124,7 +124,7 @@ class GreyHandler:
                         MessageHandler(pattern, func, run_async=run_async)
                     )
                 LOGGER.debug(
-                    f"[GreyMSG] Loaded filter pattern {pattern} for function {func.__name__}"
+                    f"[WikiMSG] Loaded filter pattern {pattern} for function {func.__name__}"
                 )
 
             return func
@@ -139,7 +139,7 @@ class GreyHandler:
                 )
             )
             LOGGER.debug(
-                f"[GreyCALLBACK] Loaded callbackquery handler with pattern {pattern} for function {func.__name__}"
+                f"[WikiCALLBACK] Loaded callbackquery handler with pattern {pattern} for function {func.__name__}"
             )
             return func
 
@@ -165,14 +165,14 @@ class GreyHandler:
                 )
             )
             LOGGER.debug(
-                f"[GreyINLINE] Loaded inlinequery handler with pattern {pattern} for function {func.__name__} | PASSES USER DATA: {pass_user_data} | PASSES CHAT DATA: {pass_chat_data} | CHAT TYPES: {chat_types}"
+                f"[WikiINLINE] Loaded inlinequery handler with pattern {pattern} for function {func.__name__} | PASSES USER DATA: {pass_user_data} | PASSES CHAT DATA: {pass_chat_data} | CHAT TYPES: {chat_types}"
             )
             return func
 
         return _inlinequery
 
 
-Greycmd = GreyHandler(d).command
-Greymsg = GreyHandler(d).message
-Greycallback = GreyHandler(d).callbackquery
-Greyinline = GreyHandler(d).inlinequery
+Wikicmd = WikiHandler(d).command
+Wikimsg = WikiHandler(d).message
+Wikicallback = WikiHandler(d).callbackquery
+Wikiinline = WikiHandler(d).inlinequery
