@@ -6,9 +6,9 @@ from typing import List
 from random import randint
 
 from sqlalchemy.sql.expression import text
-from GreyCilik.modules.helper_funcs.chat_status import user_admin
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik import (
+from Wiki_W.modules.helper_funcs.chat_status import user_admin
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W import (
     dispatcher,
     WALL_API,
 )
@@ -29,10 +29,10 @@ from telegram import (
 from telegram.error import BadRequest
 from telegram.ext.dispatcher import run_async
 from telegram.ext import CallbackContext, Filters, CommandHandler
-from GreyCilik import StartTime
-from GreyCilik.modules.helper_funcs.chat_status import sudo_plus
-from GreyCilik.modules.helper_funcs.alternate import send_action, typing_action
-from GreyCilik.modules.language import gs
+from Wiki_W import StartTime
+from Wiki_W.modules.helper_funcs.chat_status import sudo_plus
+from Wiki_W.modules.helper_funcs.alternate import send_action, typing_action
+from Wiki_W.modules.language import gs
 
 
 
