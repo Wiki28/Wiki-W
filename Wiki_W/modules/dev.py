@@ -5,10 +5,10 @@ import sys
 from contextlib import suppress
 from time import sleep
 
-import GreyCilik
+import Wiki_W
 
-from GreyCilik import dispatcher
-from GreyCilik.modules.helper_funcs.chat_status import dev_plus
+from Wiki_W import dispatcher
+from Wiki_W.modules.helper_funcs.chat_status import dev_plus
 from telegram import TelegramError, Update
 from telegram.error import Unauthorized
 from telegram.ext import CallbackContext, CommandHandler
