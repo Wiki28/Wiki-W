@@ -1,6 +1,6 @@
 import requests
-from GreyCilik.events import register
-from GreyCilik import telethn as tbot
+from Wiki_W.events import register
+from Wiki_W import telethn as tbot
 
 
 @register(pattern="^/ptl ?(.*)")
