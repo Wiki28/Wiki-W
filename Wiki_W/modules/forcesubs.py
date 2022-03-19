@@ -10,10 +10,10 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 )
 from pyrogram.types import ChatPermissions, InlineKeyboardButton, InlineKeyboardMarkup
 
-from GreyCilik import DRAGONS as SUDO_USERS
-from GreyCilik import pbot
-from GreyCilik.modules.sql import forceSubscribe_sql as sql
-from GreyCilik.modules.language import gs
+from Wiki_W import DRAGONS as SUDO_USERS
+from Wiki_W import pbot
+from Wiki_W.modules.sql import forceSubscribe_sql as sql
+from Wiki_W.modules.language import gs
 
 logging.basicConfig(level=logging.INFO)
 
@@ -110,7 +110,7 @@ def _check_member(client, message):
                     )
                 except ChatAdminRequired:
                     sent_message.edit(
-                        "😕 **Grey bukan admin disini..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
+                        "😕 **Wiki W bukan admin disini..**\n__Give me ban permissions and retry.. \n#Ending FSub...__"
                     )
 
             except ChatAdminRequired:
