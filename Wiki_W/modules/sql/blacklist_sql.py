@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import func, distinct, Column, String, UnicodeText, Integer
 
-from GreyCilik.modules.sql import SESSION, BASE
+from Wiki_W.modules.sql import SESSION, BASE
 
 
 class BlackListFilters(BASE):
