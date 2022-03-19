@@ -1,8 +1,8 @@
 import textwrap
 import os
 from PIL import Image, ImageFont, ImageDraw
-from GreyCilik.events import register
-from GreyCilik import LOGGER, TEMP_DOWNLOAD_DIRECTORY, telethn as bot
+from Wiki_W import register
+from Wiki_W import LOGGER, TEMP_DOWNLOAD_DIRECTORY, telethn as bot
 
 
 @register(pattern="^/mmf ?(.*)")
@@ -39,7 +39,7 @@ async def drawText(image_path, text):
     if os.name == "nt":
         fnt = "ariel.ttf"
     else:
-        fnt = "./GreyCilik/resources/default.ttf"
+        fnt = "./Wiki_W/resources/default.ttf"
     m_font = ImageFont.truetype(fnt, int((70 / 640) * i_width))
     if ";" in text:
         upper_text, lower_text = text.split(";")
