@@ -1,13 +1,13 @@
 import random, html
 
-from GreyCilik import dispatcher
-from GreyCilik.modules.disable import (
+from Wiki_W import dispatcher
+from Wiki_W.modules.disable import (
     DisableAbleCommandHandler,
     DisableAbleMessageHandler,
 )
-from GreyCilik.modules.sql import afk_sql as sql
-from GreyCilik.modules.users import get_user_id
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.sql import afk_sql as sql
+from Wiki_W.modules.users import get_user_id
+from Wiki_W.modules.language import gs
 from telegram import MessageEntity, Update
 from telegram.error import BadRequest
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
