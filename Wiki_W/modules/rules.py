@@ -1,9 +1,9 @@
 from typing import Optional
 
-import GreyCilik.modules.sql.rules_sql as sql
-from GreyCilik import dispatcher
-from GreyCilik.modules.helper_funcs.chat_status import user_admin
-from GreyCilik.modules.helper_funcs.string_handling import markdown_parser
+import Wiki_W.modules.sql.rules_sql as sql
+from Wiki_W import dispatcher
+from Wiki_W.modules.helper_funcs.chat_status import user_admin
+from Wiki_W.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
