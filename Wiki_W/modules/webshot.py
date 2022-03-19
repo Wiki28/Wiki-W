@@ -1,8 +1,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from GreyCilik import pbot as app
-from GreyCilik.utils.errors import capture_err
+from Wiki_W import pbot as app
+from Wiki_W.utils.errors import capture_err
 
 __mod_name__ = "Webshot​"
 
