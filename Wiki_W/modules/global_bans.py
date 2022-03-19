@@ -13,9 +13,9 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import mention_html
 
-import GreyCilik.modules.sql.global_bans_sql as sql
-from GreyCilik.modules.sql.users_sql import get_user_com_chats
-from GreyCilik import (
+import Wiki_W.modules.sql.global_bans_sql as sql
+from Wiki_W.modules.sql.users_sql import get_user_com_chats
+from Wiki_W import (
     DEV_USERS,
     EVENT_LOGS,
     OWNER_ID,
@@ -29,17 +29,17 @@ from GreyCilik import (
     sw,
     dispatcher,
 )
-from GreyCilik.modules.helper_funcs.chat_status import (
+from Wiki_W.modules.helper_funcs.chat_status import (
     is_user_admin,
     support_plus,
     user_admin,
 )
-from GreyCilik.modules.helper_funcs.extraction import (
+from Wiki_W.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from GreyCilik.modules.helper_funcs.misc import send_to_list
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.helper_funcs.misc import send_to_list
+from Wiki_W.modules.language import gs
 
 GBAN_ENFORCE_GROUP = 6
 
