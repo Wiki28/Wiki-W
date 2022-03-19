@@ -1,9 +1,9 @@
 import html
 
-from GreyCilik import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
-from GreyCilik.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.sql import reporting_sql as sql
+from Wiki_W import LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher
+from Wiki_W.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.sql import reporting_sql as sql
 from telegram import Chat, InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import BadRequest, Unauthorized
 from telegram.ext import (
@@ -14,7 +14,7 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.utils.helpers import mention_html
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 REPORT_GROUP = 12
 REPORT_IMMUNE_USERS = DRAGONS + TIGERS + WOLVES
