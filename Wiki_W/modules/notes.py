@@ -3,14 +3,14 @@ from io import BytesIO
 import random
 from typing import Optional
 
-import GreyCilik.modules.sql.notes_sql as sql
-from GreyCilik import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.handlers import MessageHandlerChecker
-from GreyCilik.modules.helper_funcs.chat_status import user_admin, connection_status
-from GreyCilik.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from GreyCilik.modules.helper_funcs.msg_types import get_note_type
-from GreyCilik.modules.helper_funcs.string_handling import (
+import Wiki_W.modules.sql.notes_sql as sql
+from Wiki_W import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGONS
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.handlers import MessageHandlerChecker
+from Wiki_W.modules.helper_funcs.chat_status import user_admin, connection_status
+from Wiki_W.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Wiki_W.modules.helper_funcs.msg_types import get_note_type
+from Wiki_W.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
 )
 from telegram import (
@@ -30,7 +30,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 FILE_MATCHER = re.compile(r"^###file_id(!photo)?###:(.*?)(?:\s|$)")
 STICKER_MATCHER = re.compile(r"^###sticker(!photo)?###:")
