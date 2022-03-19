@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from GreyCilik import TIGERS, WOLVES, dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.chat_status import (
+from Wiki_W import TIGERS, WOLVES, dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
@@ -14,16 +14,16 @@ from GreyCilik.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from GreyCilik.modules.helper_funcs.extraction import (
+from Wiki_W.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from GreyCilik.modules.helper_funcs.filters import CustomFilters
-from GreyCilik.modules.helper_funcs.misc import split_message
-from GreyCilik.modules.helper_funcs.string_handling import split_quotes
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.sql import warns_sql as sql
+from Wiki_W.modules.helper_funcs.filters import CustomFilters
+from Wiki_W.modules.helper_funcs.misc import split_message
+from Wiki_W.modules.helper_funcs.string_handling import split_quotes
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,8 +45,8 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from GreyCilik.modules.sql.approve_sql import is_approved
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.sql.approve_sql import is_approved
+from Wiki_W.modules.language import gs
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
