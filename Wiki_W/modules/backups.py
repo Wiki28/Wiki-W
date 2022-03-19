@@ -5,23 +5,23 @@ from telegram import ParseMode, Message
 from telegram.error import BadRequest
 from telegram.ext import CommandHandler
 
-import GreyCilik.modules.sql.notes_sql as sql
-from GreyCilik import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
-from GreyCilik.__main__ import DATA_IMPORT
-from GreyCilik.modules.helper_funcs.chat_status import user_admin
-from GreyCilik.modules.helper_funcs.alternate import typing_action
+import Wiki_W.modules.sql.notes_sql as sql
+from Wiki_W import dispatcher, LOGGER, OWNER_ID, JOIN_LOGGER, SUPPORT_CHAT
+from Wiki_W.__main__ import DATA_IMPORT
+from Wiki_W.modules.helper_funcs.chat_status import user_admin
+from Wiki_W.modules.helper_funcs.alternate import typing_action
 
-# from GreyCilik.modules.rules import get_rules
-import GreyCilik.modules.sql.rules_sql as rulessql
+# from Wiki_W.modules.rules import get_rules
+import Wiki_W.modules.sql.rules_sql as rulessql
 
-# from GreyCilik.modules.sql import warns_sql as warnssql
-import GreyCilik.modules.sql.blacklist_sql as blacklistsql
-from GreyCilik.modules.sql import disable_sql as disabledsql
+# from Wiki_W.modules.sql import warns_sql as warnssql
+import Wiki_W.modules.sql.blacklist_sql as blacklistsql
+from Wiki_W.modules.sql import disable_sql as disabledsql
 
-# from GreyCilik.modules.sql import cust_filters_sql as filtersql
-# import GreyCilik.modules.sql.welcome_sql as welcsql
-import GreyCilik.modules.sql.locks_sql as locksql
-from GreyCilik.modules.connection import connected
+# from Wiki_W.modules.sql import cust_filters_sql as filtersql
+# import Wiki_W.modules.sql.welcome_sql as welcsql
+import Wiki_W.modules.sql.locks_sql as locksql
+from Wiki_W.modules.connection import connected
 
 
 @user_admin
@@ -330,7 +330,7 @@ def export_data(update, context):
         },
     }
     baccinfo = json.dumps(backup, indent=4)
-    with open("Grey Cilik{}.backup".format(chat_id), "w") as f:
+    with open("Wiki W{}.backup".format(chat_id), "w") as f:
         f.write(str(baccinfo))
     context.bot.sendChatAction(current_chat_id, "upload_document")
     tgl = time.strftime("%H:%M:%S - %d/%m/%Y", time.localtime(time.time()))
@@ -348,8 +348,8 @@ def export_data(update, context):
         pass
     context.bot.sendDocument(
         current_chat_id,
-        document=open("Grey Cilik{}.backup".format(chat_id), "rb"),
-        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Grey Cilik-Backup` was specially made for notes.".format(
+        document=open("Wiki W{}.backup".format(chat_id), "rb"),
+        caption="*Successfully Exported backup:*\nChat: `{}`\nChat ID: `{}`\nOn: `{}`\n\nNote: This `Wiki W-Backup` was specially made for notes.".format(
             chat.title,
             chat_id,
             tgl,
@@ -358,7 +358,7 @@ def export_data(update, context):
         reply_to_message_id=msg.message_id,
         parse_mode=ParseMode.MARKDOWN,
     )
-    os.remove("Grey Cilik{}.backup".format(chat_id))  # Cleaning file
+    os.remove("Wiki W{}.backup".format(chat_id))  # Cleaning file
 
 
 # Temporary data
