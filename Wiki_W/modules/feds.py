@@ -7,8 +7,8 @@ import time
 import uuid
 from io import BytesIO
 
-import GreyCilik.modules.sql.feds_sql as sql
-from GreyCilik import (
+import Wiki_W.modules.sql.feds_sql as sql
+from Wiki_W import (
     EVENT_LOGS,
     LOGGER,
     SUPPORT_CHAT,
@@ -18,15 +18,15 @@ from GreyCilik import (
     WOLVES,
     dispatcher,
 )
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.alternate import send_message
-from GreyCilik.modules.helper_funcs.chat_status import is_user_admin
-from GreyCilik.modules.helper_funcs.extraction import (
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.alternate import send_message
+from Wiki_W.modules.helper_funcs.chat_status import is_user_admin
+from Wiki_W.modules.helper_funcs.extraction import (
     extract_unt_fedban,
     extract_user,
     extract_user_fban,
 )
-from GreyCilik.modules.helper_funcs.string_handling import markdown_parser
+from Wiki_W.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -42,7 +42,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html, mention_markdown
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 # Hello bot owner, I spended for feds many hours of my life, Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too
 # Federation by MrYacha 2018-2019
