@@ -4,14 +4,14 @@ import nekos
 import requests
 from PIL import Image
 from telegram import ParseMode
-from GreyCilik import dispatcher, updater
-import GreyCilik.modules.sql.nsfw_sql as sql
-from GreyCilik.modules.log_channel import gloggable
+from Wiki_W import dispatcher, updater
+import Wiki_W.modules.sql.nsfw_sql as sql
+from Wiki_W.modules.log_channel import gloggable
 from telegram import Message, Chat, Update, Bot, MessageEntity
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import CommandHandler, run_async, CallbackContext
-from GreyCilik.modules.helper_funcs.filters import CustomFilters
-from GreyCilik.modules.helper_funcs.chat_status import user_admin
+from Wiki_W.modules.helper_funcs.filters import CustomFilters
+from Wiki_W.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
 @user_admin
