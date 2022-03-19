@@ -1,17 +1,17 @@
 import html
 from typing import Optional
 
-import GreyCilik.modules.sql.blsticker_sql as sql
-from GreyCilik import LOGGER, dispatcher
-from GreyCilik.modules.connection import connected
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.alternate import send_message
-from GreyCilik.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from GreyCilik.modules.helper_funcs.misc import split_message
-from GreyCilik.modules.helper_funcs.string_handling import extract_time
+import Wiki_W.modules.sql.blsticker_sql as sql
+from Wiki_W import LOGGER, dispatcher
+from Wiki_W.modules.connection import connected
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.alternate import send_message
+from Wiki_W.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Wiki_W.modules.helper_funcs.misc import split_message
+from Wiki_W.modules.helper_funcs.string_handling import extract_time
 
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.warns import warn
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.warns import warn
 from telegram import Chat, Message, ParseMode, Update, User, ChatPermissions
 from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, MessageHandler
