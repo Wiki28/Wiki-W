@@ -10,8 +10,8 @@ set_chat_lang: "Bagus, menggunakan Bahasa {} mulai sekarang!"
 # PM Text
 pm_start_text: |
  *Halo saya Wiki W*
-Wiki W Adalah Bot Manager + Musik Untuk Group Anda.
-Tekan /help . Di Buat Oleh [Wiki W](t.me/terserah_wiki).
+"Wiki W Adalah Bot Manager + Musik Untuk Group Anda."
+"Tekan /help. Di Buat Oleh [Wiki W](t.me/terserah_wiki)."
    
 group_start_text: |
   *👋🏻 Hai, saya Wiki W!* 
