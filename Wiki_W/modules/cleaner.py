@@ -1,14 +1,14 @@
 import html
 
-from GreyCilik import ALLOW_EXCL, CustomCommandHandler, dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.chat_status import (
+from Wiki_W import ALLOW_EXCL, CustomCommandHandler, dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.chat_status import (
     bot_can_delete,
     connection_status,
     dev_plus,
     user_admin,
 )
-from GreyCilik.modules.sql import cleaner_sql as sql
+from Wiki_W.modules.sql import cleaner_sql as sql
 from telegram import ParseMode, Update
 from telegram.ext import (
     CallbackContext,
@@ -16,7 +16,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 CMD_STARTERS = ("/", "!") if ALLOW_EXCL else "/"
 BLUE_TEXT_CLEAN_GROUP = 13
