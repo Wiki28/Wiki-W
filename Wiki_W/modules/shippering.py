@@ -1,6 +1,6 @@
-from GreyCilik import pbot as app
-from GreyCilik.utils.errors import capture_err
-from GreyCilik.ex_plugins.dbfunctions import get_couple, save_couple
+from Wiki_W import pbot as app
+from Wiki_W.utils.errors import capture_err
+from Wiki_W.ex_plugins.dbfunctions import get_couple, save_couple
 from pyrogram import filters
 import random
 from datetime import datetime
