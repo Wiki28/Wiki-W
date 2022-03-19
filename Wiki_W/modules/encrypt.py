@@ -1,6 +1,6 @@
-from GreyCilik import telethn as tbot
+from Wiki_W import telethn as tbot
 import os
-from GreyCilik.events import register
+from Wiki_W.events import register
 import secureme
 
 
