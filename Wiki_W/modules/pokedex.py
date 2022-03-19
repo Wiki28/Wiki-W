@@ -1,6 +1,6 @@
 import aiohttp
 from pyrogram import filters
-from GreyCilik import pbot
+from Wiki_W import pbot
 
 
 @pbot.on_message(filters.command("pokedex"))
