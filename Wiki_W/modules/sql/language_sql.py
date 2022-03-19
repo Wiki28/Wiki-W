@@ -1,7 +1,7 @@
 import threading
 
 from sqlalchemy import Column, String, UnicodeText
-from GreyCilik.modules.sql import SESSION, BASE
+from Wiki_W.modules.sql import SESSION, BASE
 
 
 class ChatLangs(BASE):
