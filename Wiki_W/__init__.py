@@ -40,7 +40,7 @@ logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLeve
 LOGGER = logging.getLogger('[Wiki_W]')
 LOGGER.info("Wiki W is starting. | An Wiki W Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/Wiki28 (t.me/Wiki_W)")
+LOGGER.info("Project maintained by: github.com/Wiki28 (t.me/terserah_wiki)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
