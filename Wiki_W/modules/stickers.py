@@ -13,9 +13,9 @@ from telegram import TelegramError, Update
 from telegram.ext import CallbackContext
 from telegram.utils.helpers import mention_html
 
-from GreyCilik import dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.language import gs
+from Wiki_W import dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.language import gs
 
 combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
