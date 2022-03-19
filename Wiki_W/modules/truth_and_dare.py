@@ -1,9 +1,9 @@
 import html
 import random
-import GreyCilik.modules.truth_and_dare_string as truth_and_dare_string
-from GreyCilik import dispatcher
+import Wiki_W.modules.truth_and_dare_string as truth_and_dare_string
+from Wiki_W import dispatcher
 from telegram import ParseMode, Update, Bot
-from GreyCilik.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.disable import DisableAbleCommandHandler
 from telegram.ext import CallbackContext, run_async
 
 
