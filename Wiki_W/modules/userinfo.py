@@ -30,9 +30,9 @@ from telegram.ext import CallbackContext, CommandHandler
 from telegram.ext.dispatcher import run_async
 from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
-from GreyCilik import (
+from Wiki_W import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -45,16 +45,16 @@ from GreyCilik import (
     StartTime,
     SUPPORT_CHAT,
 )
-from GreyCilik.__main__ import STATS, TOKEN, USER_INFO
-from GreyCilik.modules.sql import SESSION
-import GreyCilik.modules.sql.userinfo_sql as sql
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.sql.global_bans_sql import is_user_gbanned
-from GreyCilik.modules.sql.afk_sql import is_afk, set_afk
-from GreyCilik.modules.sql.users_sql import get_user_num_chats
-from GreyCilik.modules.helper_funcs.chat_status import sudo_plus
-from GreyCilik.modules.helper_funcs.extraction import extract_user
-from GreyCilik import telethn
+from Wiki_W.__main__ import STATS, TOKEN, USER_INFO
+from Wiki_W.modules.sql import SESSION
+import Wiki_W.modules.sql.userinfo_sql as sql
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.sql.global_bans_sql import is_user_gbanned
+from Wiki_W.modules.sql.afk_sql import is_afk, set_afk
+from Wiki_W.modules.sql.users_sql import get_user_num_chats
+from Wiki_W.modules.helper_funcs.chat_status import sudo_plus
+from Wiki_W.modules.helper_funcs.extraction import extract_user
+from Wiki_W import telethn
 
 def no_by_per(totalhp, percentage):
     """
@@ -296,7 +296,7 @@ def info(update: Update, context: CallbackContext):
                     text += _stext.format("Detected")
                 elif status in {"administrator", "creator"}:
                     text += _stext.format("Admin")
-    if user_id not in [bot.id, 5094084246, 5066592080]:
+    if user_id not in [bot.id, 5165466933, 2048936969]:
         userhp = hpmanager(user)
         text += f"\n\n<b>Health:</b> <code>{userhp['earnedhp']}/{userhp['totalhp']}</code>\n[<i>{make_bar(int(userhp['percentage']))} </i>{userhp['percentage']}%]"
 
@@ -329,8 +329,8 @@ def info(update: Update, context: CallbackContext):
     elif user.id in WOLVES:
         text += "\n\nThe Disaster level of this person is 'Soldier'."
         disaster_level_present = True
-    elif user.id == 1784606556:
-         text += "\n\nOwner Of A Bot. Queen Of @reyyvbss. Bot Name Inspired From 'JoJo'."
+    elif user.id == 2048936969:
+         text += "\n\nOwner Of A Bot. Babu Of @terserah_wiki."
          disaster_level_present = True
 
     try:
@@ -367,9 +367,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/CilikProject"),
+                                "Support", url="https://t.me/WikiTapiGroup"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/CilikProject")
+                                "Update", url="https://t.me/WikiTapiChannel")
                         ],
                     ]
                 ),
@@ -385,9 +385,9 @@ def info(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                "Health", url="https://t.me/CilikProject"),
+                                "Support", url="https://t.me/WikiTapiGroup"),
                             InlineKeyboardButton(
-                                "Disaster", url="https://t.me/CilikProject")
+                                "Update", url="https://t.me/WikiTapiChannel")
                         ],
                     ]
                 ),
@@ -429,7 +429,7 @@ def about_me(update: Update, context: CallbackContext):
 def set_about_me(update: Update, context: CallbackContext):
     message = update.effective_message
     user_id = message.from_user.id
-    if user_id in [5094084246, 1784606556]:
+    if user_id in [2133434438, 2048936969]:
         message.reply_text("Error! Unauthorized")
         return
     bot = context.bot
@@ -443,7 +443,7 @@ def set_about_me(update: Update, context: CallbackContext):
     if len(info) == 2:
         if len(info[1]) < MAX_MESSAGE_LENGTH // 4:
             sql.set_user_me_info(user_id, info[1])
-            if user_id in [c, 1784606556]:
+            if user_id in [2133434438, 2048936969]:
                 message.reply_text("Authorized...Information updated!")
             elif user_id == bot.id:
                 message.reply_text("I have updated my info with the one you provided!")
@@ -459,7 +459,7 @@ def set_about_me(update: Update, context: CallbackContext):
 
 @sudo_plus
 def stats(update: Update, context: CallbackContext):
-    stats = "❂ <b>Stats For <a href='https://t.me/GreyCilik_bot'>Grey Cilik</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
+    stats = "❂ <b>Stats For <a href='https://t.me/WikiTapiBot'>Wiki W</a>:</b>\n" + "\n".join([mod.__stats__() for mod in STATS])
     result = re.sub(r"(\d+)", r"<code>\1</code>", stats)
     update.effective_message.reply_text(
         result,
@@ -508,7 +508,7 @@ def set_about_bio(update: Update, context: CallbackContext):
             )
             return
 
-        if user_id in [1784606556, 1784606556] and sender_id not in DEV_USERS:
+        if user_id in [2133434438, 2048936969] and sender_id not in DEV_USERS:
             message.reply_text("You are not authorised")
             return
 
