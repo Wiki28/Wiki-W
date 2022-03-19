@@ -10,9 +10,9 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from GreyCilik import *
-from GreyCilik.events import register
-from GreyCilik import telethn as tbot
+from Wiki_W import *
+from Wiki_W.events import register
+from Wiki_W import telethn as tbot
 
 
 async def is_register_admin(chat, user):
