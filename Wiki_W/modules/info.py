@@ -3,9 +3,9 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message
 
-from GreyCilik import DEV_USERS
-from GreyCilik import pbot as app
-from GreyCilik.services.sections import section
+from Wiki_W import DEV_USERS
+from Wiki_W import pbot as app
+from Wiki_W.services.sections import section
 
 
 async def get_user_info(user, already=False):
