@@ -1,6 +1,6 @@
-from GreyCilik import dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.alternate import typing_action
+from Wiki_W import dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.alternate import typing_action
 from telegram import ParseMode
 from telegram.ext import run_async
 
