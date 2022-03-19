@@ -1,7 +1,7 @@
 import aiohttp
 from pyrogram import filters
-from GreyCilik import pbot, BOT_USERNAME
-from GreyCilik.utils.errors import capture_err
+from Wiki_W import pbot, BOT_USERNAME
+from Wiki_W.utils.errors import capture_err
 
 
 __mod_name__ = "Github"
