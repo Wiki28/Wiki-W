@@ -6,19 +6,19 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
-import GreyCilik.modules.sql.blacklist_sql as sql
-from GreyCilik import dispatcher, LOGGER
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from GreyCilik.modules.helper_funcs.extraction import extract_text
-from GreyCilik.modules.helper_funcs.misc import split_message
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.warns import warn
-from GreyCilik.modules.helper_funcs.string_handling import extract_time
-from GreyCilik.modules.connection import connected
-from GreyCilik.modules.sql.approve_sql import is_approved
-from GreyCilik.modules.helper_funcs.alternate import send_message, typing_action
-from GreyCilik.modules.language import gs
+import Wiki_W.modules.sql.blacklist_sql as sql
+from Wiki_W import dispatcher, LOGGER
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from Wiki_W.modules.helper_funcs.extraction import extract_text
+from Wiki_W.modules.helper_funcs.misc import split_message
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.warns import warn
+from Wiki_W.modules.helper_funcs.string_handling import extract_time
+from Wiki_W.modules.connection import connected
+from Wiki_W.modules.sql.approve_sql import is_approved
+from Wiki_W.modules.helper_funcs.alternate import send_message, typing_action
+from Wiki_W.modules.language import gs
 
 BLACKLIST_GROUP = 11
 
