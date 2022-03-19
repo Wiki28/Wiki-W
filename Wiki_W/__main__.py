@@ -86,7 +86,7 @@ def get_readable_time(seconds: int) -> str:
 Wiki_IMG = "https://telegra.ph/file/22d7181751473eb2a49df.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @Wiki_W \
+ You can support the project by contacting @terserah_wiki \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -209,7 +209,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/WikiTapiBot?startgroup=new"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
@@ -410,7 +410,7 @@ def wiki_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/WikiTapiBot?startgroup=new"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
@@ -518,7 +518,7 @@ def Source_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(
                      [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/Wiki_W?startgroup=new"),
+                            InlineKeyboardButton(text=gs(chat.id, "add_bot_to_group_button"), url="t.me/WikiTapiBot?startgroup=new"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "about_button"), callback_data="wiki_"),
