@@ -3,10 +3,10 @@ from pyrogram import filters
 from aiohttp import ClientSession
 from Python_ARQ import ARQ
 
-from GreyCilik import pbot as app, BOT_ID
-from GreyCilik.utils.errors import capture_err
-from GreyCilik.utils.permissions import adminsOnly
-from GreyCilik.ex_plugins.dbfunctions import (
+from Wiki_W import pbot as app, BOT_ID
+from Wiki_W.utils.errors import capture_err
+from Wiki_W.utils.permissions import adminsOnly
+from Wiki_W.w_plugins.dbfunctions import (
     alpha_to_int,
     get_karma,
     get_karmas,
@@ -16,8 +16,8 @@ from GreyCilik.ex_plugins.dbfunctions import (
     karma_on,
     update_karma,
 )      
-from GreyCilik.utils.filter_groups import karma_negative_group, karma_positive_group
-from GreyCilik import arq
+from Wiki_W.utils.filter_groups import karma_negative_group, karma_positive_group
+from Wiki_W import arq
 
 regex_upvote = r"^((?i)\+|\+\+|\+1|thx|thanx|thanks|pro|cool|good|👍)$"
 regex_downvote = r"^(\-|\-\-|\-1|👎|noob|weak)$"
