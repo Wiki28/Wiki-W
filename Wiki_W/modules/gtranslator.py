@@ -9,10 +9,10 @@ from telegram import (
     InlineKeyboardMarkup,
     InlineKeyboardButton,
 )
-from GreyCilik import dispatcher, pbot
+from Wiki_W import dispatcher, pbot
 from pyrogram import filters
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.language import gs
 
 
 def helps(chat):
