@@ -6,8 +6,8 @@ from telegram.ext import CallbackContext
 from telegram.inline.inlinekeyboardbutton import InlineKeyboardButton
 from telegram.inline.inlinekeyboardmarkup import InlineKeyboardMarkup
 
-from GreyCilik import DRAGONS, DEV_USERS, dispatcher
-from GreyCilik.modules.helper_funcs.decorators import Greycallback 
+from Wiki_W import DRAGONS, DEV_USERS, dispatcher
+from Wiki_W.modules.helper_funcs.decorators import Wikicallback 
 
 
 class AdminPerms(Enum):
@@ -61,7 +61,7 @@ def user_admin(permission: AdminPerms):
     return wrapper
 
 
-@Greycallback (pattern="anoncb")
+@Wikicallback (pattern="anoncb")
 def anon_callback_handler1(upd: Update, _: CallbackContext):
     callback = upd.callback_query
     perm = callback.data.split('/')[3]
