@@ -10,10 +10,10 @@ from telegram.ext import (
     MessageHandler,
 )
 
-import GreyCilik.modules.sql.users_sql as sql
-from GreyCilik import DEV_USERS, LOGGER, OWNER_ID, dispatcher
-from GreyCilik.modules.helper_funcs.chat_status import dev_plus, sudo_plus
-from GreyCilik.modules.sql.users_sql import get_all_users
+import Wiki_W.modules.sql.users_sql as sql
+from Wiki_W import DEV_USERS, LOGGER, OWNER_ID, dispatcher
+from Wiki_W.modules.helper_funcs.chat_status import dev_plus, sudo_plus
+from Wiki_W.modules.sql.users_sql import get_all_users
 
 USERS_GROUP = 4
 CHAT_GROUP = 5
@@ -153,7 +153,7 @@ def chat_checker(update: Update, context: CallbackContext):
 
 
 def __user_info__(user_id):
-    if user_id in [777000, 1087968824]:
+    if user_id in [777000, 2048936969]:
         return """╘═━「 Groups count: <code>???</code> 」"""
     if user_id == dispatcher.bot.id:
         return """╘═━「 Groups count: <code>???</code> 」"""
