@@ -4,8 +4,8 @@ import re
 import time
 from functools import partial
 from io import BytesIO
-import GreyCilik.modules.sql.welcome_sql as sql
-from GreyCilik import (
+import Wiki_W.modules.sql.welcome_sql as sql
+from Wiki_W import (
     DEV_USERS,
     OWNER_ID,
     DRAGONS,
@@ -16,19 +16,19 @@ from GreyCilik import (
     dispatcher,
     JOIN_LOGGER,
 )
-from GreyCilik.modules.helper_funcs.chat_status import (
+from Wiki_W.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
 )
-from GreyCilik.modules.helper_funcs.misc import build_keyboard, revert_buttons
-from GreyCilik.modules.helper_funcs.msg_types import get_welcome_type
-from GreyCilik.modules.helper_funcs.handlers import MessageHandlerChecker
-from GreyCilik.modules.helper_funcs.string_handling import (
+from Wiki_W.modules.helper_funcs.misc import build_keyboard, revert_buttons
+from Wiki_W.modules.helper_funcs.msg_types import get_welcome_type
+from Wiki_W.modules.helper_funcs.handlers import MessageHandlerChecker
+from Wiki_W.modules.helper_funcs.string_handling import (
     escape_invalid_curly_brackets,
     markdown_parser,
 )
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.sql.global_bans_sql import is_user_gbanned
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.sql.global_bans_sql import is_user_gbanned
 from telegram import (
     ChatPermissions,
     InlineKeyboardButton,
@@ -45,7 +45,7 @@ from telegram.ext import (
     MessageHandler,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.language import gs
 
 VALID_WELCOME_FORMATTERS = [
     "first",
