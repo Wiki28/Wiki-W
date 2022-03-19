@@ -7,10 +7,10 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 
-from GreyCilik import *
+from Wiki_W import *
 
-from GreyCilik import telethn as tbot
-from GreyCilik.events import register
+from Wiki_W import telethn as tbot
+from Wiki_W.events import register
 
 
 @register(pattern="^/tts (.*)")
