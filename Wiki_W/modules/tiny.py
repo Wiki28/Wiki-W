@@ -1,8 +1,8 @@
 import os
 import cv2
 from PIL import Image
-from GreyCilik.events import register
-from GreyCilik import telethn as tbot
+from Wiki_W.events import register
+from Wiki_W import telethn as tbot
 
 
 @register(pattern="^/tiny ?(.*)")
@@ -13,16 +13,16 @@ async def _(event):
            return
     kontol = await event.reply("`Processing tiny...`")
     ik = await tbot.download_media(reply)
-    im1 = Image.open("GreyCilik/resources/Grey.png")
+    im1 = Image.open("Wiki_W/resources/Wiki.png")
     if ik.endswith(".tgs"):
-        await tbot.download_media(reply, "Grey.tgs")
-        os.system("lottie_convert.py Grey.tgs json.json")
+        await tbot.download_media(reply, "Wiki.tgs")
+        os.system("lottie_convert.py Wiki.tgs json.json")
         json = open("json.json", "r")
         jsn = json.read()
         jsn = jsn.replace("512", "2000")
         open = ("json.json", "w").write(jsn)
-        os.system("lottie_convert.py json.json Grey.tgs")
-        file = "Grey.tgs"
+        os.system("lottie_convert.py json.json Wiki.tgs")
+        file = "Wiki.tgs"
         os.remove("json.json")
     elif ik.endswith((".gif", ".mp4")):
         iik = cv2.VideoCapture(ik)
