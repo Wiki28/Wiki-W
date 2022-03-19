@@ -1,7 +1,7 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from GreyCilik import telethn as tbot
-from GreyCilik.events import register
-from GreyCilik import ubot2 as ubot
+from Wiki_W import telethn as tbot
+from Wiki_W.events import register
+from Wiki_W import ubot2 as ubot
 from asyncio.exceptions import TimeoutError
 
 
