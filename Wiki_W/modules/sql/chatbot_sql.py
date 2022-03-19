@@ -1,7 +1,7 @@
 import threading
 
 from sqlalchemy import Column, String
-from GreyCilik.modules.sql import BASE, SESSION
+from Wiki_W.modules.sql import BASE, SESSION
 
 
 class KukiChats(BASE):
