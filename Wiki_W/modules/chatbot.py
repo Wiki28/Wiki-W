@@ -28,12 +28,12 @@ from telegram.ext import (
 from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-import GreyCilik.modules.sql.chatbot_sql as sql
-from GreyCilik.modules.helper_funcs.filters import CustomFilters
-from GreyCilik.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
-from GreyCilik import dispatcher, updater, SUPPORT_CHAT
-from GreyCilik.modules.log_channel import gloggable
-from GreyCilik.modules.language import gs
+import Wiki_W.modules.sql.chatbot_sql as sql
+from Wiki_W.modules.helper_funcs.filters import CustomFilters
+from Wiki_W.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from Wiki_W import dispatcher, updater, SUPPORT_CHAT
+from Wiki_W.modules.log_channel import gloggable
+from Wiki_W.modules.language import gs
 
 
 @user_admin_no_reply
@@ -55,7 +55,7 @@ def kukirm(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Grey Chatbot disable by {}.".format(
+                "Wiki W Chatbot disable by {}.".format(
                     mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -83,7 +83,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Grey Chatbot enable by {}.".format(
+                "Wiki W Chatbot enable by {}.".format(
                     mention_html(user.id, user.first_name)
                 ),
                 parse_mode=ParseMode.HTML,
@@ -147,7 +147,7 @@ def chatbot(update: Update, context: CallbackContext):
 
 def list_all_chats(update: Update, context: CallbackContext):
     chats = sql.get_all_kuki_chats()
-    text = "<b>GreyCilik Enabled Chats</b>\n"
+    text = "<b>Wiki W Enabled Chats</b>\n"
     for chat in chats:
         try:
             x = context.bot.get_chat(int(*chat))
