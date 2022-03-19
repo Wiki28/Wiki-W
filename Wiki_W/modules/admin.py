@@ -5,9 +5,9 @@ from telegram.error import BadRequest
 from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
-from GreyCilik import DRAGONS, dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.chat_status import (
+from Wiki_W import DRAGONS, dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.chat_status import (
     bot_admin,
     can_pin,
     can_promote,
@@ -16,14 +16,14 @@ from GreyCilik.modules.helper_funcs.chat_status import (
     ADMIN_CACHE,
 )
 
-from GreyCilik.modules.helper_funcs.admin_rights import user_can_changeinfo, user_can_promote
-from GreyCilik.modules.helper_funcs.extraction import (
+from Wiki_W.modules.helper_funcs.admin_rights import user_can_changeinfo, user_can_promote
+from Wiki_W.modules.helper_funcs.extraction import (
     extract_user,
     extract_user_and_text,
 )
-from GreyCilik.modules.log_channel import loggable
-from GreyCilik.modules.helper_funcs.alternate import send_message
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.log_channel import loggable
+from Wiki_W.modules.helper_funcs.alternate import send_message
+from Wiki_W.modules.language import gs
 
 
 @bot_admin
