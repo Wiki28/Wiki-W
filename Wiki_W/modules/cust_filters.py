@@ -13,24 +13,24 @@ from telegram.ext import (
     Filters,
 )
 from telegram.utils.helpers import mention_html, escape_markdown
-from GreyCilik import dispatcher, LOGGER, DRAGONS
-from GreyCilik.modules.disable import DisableAbleCommandHandler
-from GreyCilik.modules.helper_funcs.handlers import MessageHandlerChecker
-from GreyCilik.modules.helper_funcs.chat_status import user_admin
-from GreyCilik.modules.helper_funcs.extraction import extract_text
-from GreyCilik.modules.helper_funcs.filters import CustomFilters
-from GreyCilik.modules.helper_funcs.misc import build_keyboard_parser
-from GreyCilik.modules.helper_funcs.msg_types import get_filter_type
-from GreyCilik.modules.helper_funcs.string_handling import (
+from Wiki_W import dispatcher, LOGGER, DRAGONS
+from Wiki_W.modules.disable import DisableAbleCommandHandler
+from Wiki_W.modules.helper_funcs.handlers import MessageHandlerChecker
+from Wiki_W.modules.helper_funcs.chat_status import user_admin
+from Wiki_W.modules.helper_funcs.extraction import extract_text
+from Wiki_W.modules.helper_funcs.filters import CustomFilters
+from Wiki_W.modules.helper_funcs.misc import build_keyboard_parser
+from Wiki_W.modules.helper_funcs.msg_types import get_filter_type
+from Wiki_W.modules.helper_funcs.string_handling import (
     split_quotes,
     button_markdown_parser,
     escape_invalid_curly_brackets,
     markdown_to_html,
 )
-from GreyCilik.modules.sql import cust_filters_sql as sql
-from GreyCilik.modules.connection import connected
-from GreyCilik.modules.helper_funcs.alternate import send_message, typing_action
-from GreyCilik.modules.language import gs
+from Wiki_W.modules.sql import cust_filters_sql as sql
+from Wiki_W.modules.connection import connected
+from Wiki_W.modules.helper_funcs.alternate import send_message, typing_action
+from Wiki_W.modules.language import gs
 
 HANDLER_GROUP = 10
 
