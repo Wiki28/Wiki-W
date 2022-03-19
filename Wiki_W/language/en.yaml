@@ -11,7 +11,7 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 pm_start_text: |
   *Hello I'm Wiki W*
   I'm Bot Manager + Music For Your Group.
-  Hit /help . Made by [Wiki W](t.me/Wiki_W).
+  Hit /help . Made by [Wiki W](t.me/terserah_wiki).
    
 group_start_text: |
   *👋🏻 Hi, I'm Wiki W!*
