@@ -1,7 +1,7 @@
 import threading
 
-from GreyCilik import dispatcher
-from GreyCilik.modules.sql import BASE, SESSION
+from Wiki_W import dispatcher
+from Wiki_W.modules.sql import BASE, SESSION
 from sqlalchemy import (
     Column,
     ForeignKey,
