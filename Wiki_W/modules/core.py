@@ -1,15 +1,15 @@
-from GreyCilik import telethn as tbot
-from GreyCilik.events import register
+from Wiki_W import telethn as tbot
+from Wiki_W.events import register
 import os
 import asyncio
 import os
 import time
 from datetime import datetime
-from GreyCilik import OWNER_ID, DEV_USERS
-from GreyCilik import TEMP_DOWNLOAD_DIRECTORY as path
-from GreyCilik import TEMP_DOWNLOAD_DIRECTORY
+from Wiki_W import OWNER_ID, DEV_USERS
+from Wiki_W import TEMP_DOWNLOAD_DIRECTORY as path
+from Wiki_W import TEMP_DOWNLOAD_DIRECTORY
 from datetime import datetime
-water = './GreyCilik/resources/Grey.png'
+water = './Wiki_W/resources/Wiki.png'
 client = tbot
 
 @register(pattern=r"^/send ?(.*)")
