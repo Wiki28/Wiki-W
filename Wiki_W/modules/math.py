@@ -1,8 +1,8 @@
 import math
 
 import pynewtonmath as newton
-from GreyCilik import dispatcher
-from GreyCilik.modules.disable import DisableAbleCommandHandler
+from Wiki_W import dispatcher
+from Wiki_W.modules.disable import DisableAbleCommandHandler
 from telegram import Update
 from telegram.ext import CallbackContext, run_async
 
