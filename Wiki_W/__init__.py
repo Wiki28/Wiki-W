@@ -40,7 +40,7 @@ logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLeve
 LOGGER = logging.getLogger('[Wiki_W]')
 LOGGER.info("Wiki W is starting. | An Wiki W Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
-LOGGER.info("Project maintained by: github.com/Wiki28 (t.me/terserah_wiki)")
+LOGGER.info("Project maintained by: github.com/Wiki28 (t.me/saya-wiki)")
 
 # if version < 3.9, stop bot.
 if sys.version_info[0] < 3 or sys.version_info[1] < 9:
@@ -52,15 +52,15 @@ if sys.version_info[0] < 3 or sys.version_info[1] < 9:
 ENV = bool(os.environ.get("ENV", False))
 
 if ENV:
-    TOKEN = os.environ.get("TOKEN", None)
+    TOKEN = os.environ.get("TOKEN", "5165466933:AAHGkpiVy6DiyWuxIDq4vEkMxNRO90Zef6s")
 
     try:
-        OWNER_ID = int(os.environ.get("OWNER_ID", None))
+        OWNER_ID = int(os.environ.get("OWNER_ID", "2133434438"))
     except ValueError:
         raise Exception("Your OWNER_ID env variable is not a valid integer.")
 
-    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", None)
-    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None)
+    JOIN_LOGGER = os.environ.get("JOIN_LOGGER", "-1001632507151")
+    OWNER_USERNAME = os.environ.get("OWNER_USERNAME", "@saya_wiki")
 
     try:
         DRAGONS = {int(x) for x in os.environ.get("DRAGONS", "").split()}
@@ -90,14 +90,14 @@ if ENV:
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
-    API_ID = os.environ.get("API_ID", "19051884")
-    API_HASH = os.environ.get("API_HASH", "66ccb3413c58801bb202ad86cf09c65b")
+    API_ID = os.environ.get("API_ID", "8529843")
+    API_HASH = os.environ.get("API_HASH", "6e06fb8f7b42fb33821f272597321bc1")
     SESSION_STRING = os.environ.get("SESSION_STRING", None)
-    STRING_SESSION = os.environ.get("STRING_SESSION", None)
+    STRING_SESSION = os.environ.get("STRING_SESSION", "BQATIVtEGD8nOcvHZI663BpIJPkDdQQr3738S55xZL2eOSfe3HjyCrQoQ2e3xsvLPxQ3q0nruQMnMM0T8CvSyjF-SxTRn_NnpYb_jNslEqeX1yBoM6JC2u38MOaK8Panfq4x77aPgwh9z09g9gJlUJCtFQd3sLA7Tpur9rSzZHxrnh4JlImDeBueCJ9GL0LhpgvcmZx3FInK-WwCVMjrx9xyqquai8N2-HwnsF4xCYWOC8cMwt1vm3QoEEFttLRyiti77eK_H_n6OYBMqYbmg893Pc_yHGwJsI9fH7VrgsE0ELHfHp3QlA8zsQyHIPg7j2v_KDimuvmWyPe3kX67C7SKfymgRgA")
     DB_URL = os.environ.get("DATABASE_URL")
-    DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
+    DB_URL = DB_URL.replace("postgres://", "postgres://ctarxcur:KAqJB1W96XW0nMLJwkWfvXuN6w1cbfUs@peanut.db.elephantsql.com/ctarxcur", 1)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "ihAEGNtfnVtCsWnzqiXM1GcS")
-    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
+    MONGO_DB_URI = os.environ.get("MONGO_DB_URI", "mongodb+srv://123:123@manager.t6nkar1.mongodb.net/?retryWrites=true&w=majority")
     ARQ_API = os.environ.get("ARQ_API", "JCUSQE-WXAZOE-GHXYTK-WXHBEB-ARQ")
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
@@ -117,13 +117,13 @@ if ENV:
     WALL_API = os.environ.get("WALL_API", None)
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
-    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
+    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", "dnOBMh8dS4AqaYrya~2q591m_U2Fq2sfR_qhtwPrchi1oDWi05Y9O8pmGZ5pc9BT")
     LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
     CF_API_KEY = os.environ.get("CF_API_KEY", None)
     WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
     ARQ_API_URL = "https://thearq.tech/"
-    ARQ_API_KEY = "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ"
+    ARQ_API_KEY = "CISUWT-EWPYHE-YOITGT-EEKWOX-ARQ"
  
     
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
@@ -213,10 +213,9 @@ else:
 # If you forking dont remove this id, just add your id. LOL...
 
 DRAGONS.add(OWNER_ID)
-DRAGONS.add(1784606556)
+DRAGONS.add(2133434438)
 DEV_USERS.add(OWNER_ID)
-DEV_USERS.add(1784606556)
-DEV_USERS.add(1416529201)
+DEV_USERS.add(2133434438)
 
 
 if not SPAMWATCH_API:
